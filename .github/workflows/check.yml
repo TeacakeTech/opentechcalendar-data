@@ -1,0 +1,21 @@
+name: Check
+on:
+  pull_request:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.13
+        architecture: x64
+    # During initial development we'll use latest, but later we should use: pip install datatig
+    - run: pip install git+https://github.com/datatig/datatig.git@main#egg=datatig
+    - run: python -m datatig check .
+

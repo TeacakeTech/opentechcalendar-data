@@ -1,0 +1,145 @@
+title: Data for Open Tech Calendar
+description: Website at https://opentechcalendar.co.uk/
+types:
+- id: place
+  directory: place
+  default_format: yaml
+  fields:
+  - id: title
+    title: Title
+    required: true
+  - id: country
+    title: Country
+  - id: parent_place
+    title: Parent Place
+  - id: old_opentechcalendar_area
+    title: Old OpenTechCalendar Area Slug
+- id: group
+  directory: group
+  default_format: md
+  markdown_body_is_field: content
+  fields:
+  - id: title
+    title: Title
+    required: true
+  - id: url
+    title: URL
+    type: url
+    required: true
+  - id: content
+    title: Content
+    type: markdown
+  - id: country
+    title: Country
+  - id: place
+    title: Place
+  - id: import_type
+    key: import/type
+    title: Import Type
+    type: enum
+    choices:
+    - value: ical
+      title: iCal
+  - id: timezone
+    title: Timezone
+    type: timezone
+  - id: import_url
+    key: import/url
+    title: Import URL
+  - id: in_person
+    title: In-person events
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: always
+      title: Always
+    - value: sometimes
+      title: Sometimes
+    - value: never
+      title: Never
+  - id: code_of_conduct_url
+    title: Code of Conduct URL
+    type: url
+  - id: logo_url
+    title: Logo URL
+    type: url
+- id: event
+  directory: event
+  list_fields:
+  - title
+  - start_at
+  default_format: md
+  markdown_body_is_field: content
+  fields:
+  - id: title
+    key: title
+    title: Title
+    required: true
+  - id: content
+    key: content
+    title: Content
+    type: markdown
+  - id: timezone
+    title: Timezone
+    type: timezone
+    required: true
+  - id: start_at
+    key: start_at
+    title: Start At
+    type: datetime
+    timezone: Europe/London
+    timezone_field: timezone
+    required: true
+  - id: end_at
+    key: end_at
+    title: End At
+    type: datetime
+    timezone: Europe/London
+    timezone_field: timezone
+    required: true
+  - id: url
+    key: url
+    title: URL
+    type: url
+    required: true
+  - id: cancelled
+    key: cancelled
+    title: Cancelled
+    type: boolean
+  - id: group
+    key: group
+    title: Group
+  - id: country
+    title: Country
+  - id: place
+    title: Place
+  - id: imported
+    title: Imported
+    type: boolean
+  - id: in_person
+    title: In-person event
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: "yes"
+      title: "Yes"
+    - value: "no"
+      title: "No"
+  - id: code_of_conduct_url
+    title: Code of Conduct URL
+    type: url
+calendars:
+  main:
+    timezone: Europe/London
+    datas:
+      - type: event
+        summary: title
+        start: start_at
+        end: end_at
+        id: "event_{{record_id}}@opentechcalendar.co.uk"
+githost:
+  url: TeacakeTech/opentechcalendar-data
+  primary_branch: main
+
