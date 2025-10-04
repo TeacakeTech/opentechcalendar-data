@@ -1,0 +1,90 @@
+title: Data for Open Tech Calendar
+description: Website at https://opentechcalendar.co.uk/
+types:
+- id: place
+  directory: place
+  default_format: yaml
+  fields:
+  - id: title
+    title: Title
+    required: true
+  - id: country
+    title: Country
+  - id: parent_place
+    title: Parent Place
+  - id: old_opentechcalendar_area
+    title: Old OpenTechCalendar Area Slug
+- id: group
+  directory: group
+  default_format: md
+  markdown_body_is_field: content
+  fields:
+  - id: title
+    title: Title
+    required: true
+  - id: url
+    title: URL
+    type: url
+    required: true
+  - id: content
+    title: Content
+    type: markdown
+  - id: country
+    title: Country
+  - id: place
+    title: Place
+- id: event
+  directory: event
+  list_fields:
+  - title
+  - start_at
+  default_format: md
+  markdown_body_is_field: content
+  fields:
+  - id: title
+    key: title
+    title: Title
+    required: true
+  - id: content
+    key: content
+    title: Content
+    type: markdown
+  - id: start_at
+    key: start_at
+    title: Start At
+    type: datetime
+    required: true
+  - id: end_at
+    key: end_at
+    title: End At
+    type: datetime
+    required: true
+  - id: url
+    key: url
+    title: URL
+    type: url
+    required: true
+  - id: cancelled
+    key: cancelled
+    title: Cancelled
+    type: boolean
+  - id: group
+    key: group
+    title: Group
+  - id: country
+    title: Country
+  - id: place
+    title: Place
+calendars:
+  main:
+    timezone: Europe/London
+    datas:
+      - type: event
+        summary: title
+        start: start_at
+        end: end_at
+        id: "event_{{record_id}}@opentechcalendar.co.uk"
+githost:
+  url: TeacakeTech/opentechcalendar-data
+  primary_branch: main
+
