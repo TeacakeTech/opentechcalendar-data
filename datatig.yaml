@@ -33,6 +33,12 @@ types:
     title: Country
   - id: place
     title: Place
+  - id: import_type
+    key: import/type
+    title: Import Type
+  - id: import_url
+    key: import/url
+    title: Import URL
 - id: event
   directory: event
   list_fields:
@@ -75,6 +81,9 @@ types:
     title: Country
   - id: place
     title: Place
+  - id: imported
+    title: Imported
+    type: boolean
 calendars:
   main:
     timezone: Europe/London
