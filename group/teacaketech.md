@@ -3,6 +3,7 @@ title: Teacake Tech
 url: https://www.teacaketech.scot/our-virtual-events/
 country: GB
 place: scotland
+timezone: Europe/London
 import:
   type: ical
   url: https://www.teacaketech.scot/our-virtual-events/feed.ical

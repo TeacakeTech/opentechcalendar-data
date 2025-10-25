@@ -36,6 +36,9 @@ types:
   - id: import_type
     key: import/type
     title: Import Type
+  - id: timezone
+    title: Timezone
+    type: timezone
   - id: import_url
     key: import/url
     title: Import URL
@@ -55,15 +58,21 @@ types:
     key: content
     title: Content
     type: markdown
+  - id: timezone
+    title: Timezone
+    type: timezone
+    required: true
   - id: start_at
     key: start_at
     title: Start At
     type: datetime
+    timezone_field: timezone
     required: true
   - id: end_at
     key: end_at
     title: End At
     type: datetime
+    timezone_field: timezone
     required: true
   - id: url
     key: url
