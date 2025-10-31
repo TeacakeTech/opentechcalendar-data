@@ -42,6 +42,18 @@ types:
   - id: import_url
     key: import/url
     title: Import URL
+  - id: in_person
+    title: In-person events
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: always
+      title: Always
+    - value: sometimes
+      title: Sometimes
+    - value: never
+      title: Never
 - id: event
   directory: event
   list_fields:
@@ -95,6 +107,16 @@ types:
   - id: imported
     title: Imported
     type: boolean
+  - id: in_person
+    title: In-person event
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: "yes"
+      title: "Yes"
+    - value: "no"
+      title: "No"
 calendars:
   main:
     timezone: Europe/London
