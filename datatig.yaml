@@ -54,6 +54,9 @@ types:
       title: Sometimes
     - value: never
       title: Never
+  - id: code_of_conduct
+    title: Code of Conduct
+    type: url
 - id: event
   directory: event
   list_fields:
@@ -117,6 +120,9 @@ types:
       title: "Yes"
     - value: "no"
       title: "No"
+  - id: code_of_conduct
+    title: Code of Conduct
+    type: url
 calendars:
   main:
     timezone: Europe/London
