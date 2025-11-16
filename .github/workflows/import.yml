@@ -1,0 +1,47 @@
+name: Run Importers
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.13
+        architecture: x64
+    - name: Set up git 1
+      run: git config --global user.name 'Open Tech Calendar Importers'
+    - name: Set up git 2
+      run: git config --global user.email 'hello@opentechcalendar.co.uk'
+    - name: Install
+      run: pip install opentechcalendartools
+    - name: Build SQLite database
+      run: python -m datatig build --sqliteoutput database.sqlite .
+    - name: Run Importers
+      shell: bash
+      run: |
+        set -e
+        my_command_output=$(python -m opentechcalendartools listgroupstoimport)
+        current_dt=$(date '+%F-%H-%M-%S')
+        while IFS= read -r line; do
+          echo "Group: $line"
+          echo "Git Branches ..."
+          git checkout main
+          git checkout -b import-$current_dt-$line
+          echo "Import ..."
+          python -m opentechcalendartools importgroup $line
+          echo "Git add, commit and push? ..."
+          git add event
+          if git commit -m "Import events for group $line" -a; then
+            git push origin import-$current_dt-$line
+          fi
+        done <<< "$my_command_output"
+      env:
+        OPEN_TECH_CALENDAR_TOOLS_SQLITE_DATABASE_FILENAME: database.sqlite
+
+
