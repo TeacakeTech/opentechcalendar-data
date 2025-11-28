@@ -1,7 +1,7 @@
 ---
 title: FluConf
 url: https://fluconf.online/
-in_person: never
+in_person: none
 code_of_conduct_url: https://fluconf.online/code-of-conduct/
 ---
 

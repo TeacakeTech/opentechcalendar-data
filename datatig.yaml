@@ -52,15 +52,54 @@ types:
     choices:
     - value: unknown
       title: Unknown
-    - value: always
-      title: Always
-    - value: sometimes
-      title: Sometimes
-    - value: never
-      title: Never
+    - value: all
+      title: All events from this group
+    - value: some
+      title: Some events from this group
+    - value: none
+      title: No events from this group
   - id: code_of_conduct_url
     title: Code of Conduct URL
     type: url
+  - id: community_participation_at_event
+    key: community_participation/at_event
+    title: "Community Participation: Interact with event?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: all
+      title: All events from this group
+    - value: some
+      title: Some events from this group
+    - value: none
+      title: No events from this group
+  - id: community_participation_at_event_audience_text
+    key: community_participation/at_event_audience_text
+    title: "Community Participation: Interact with other audience members at the event via text?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: all
+      title: All events from this group
+    - value: some
+      title: Some events from this group
+    - value: none
+      title: No events from this group
+  - id: community_participation_at_event_audience_audio
+    key: community_participation/at_event_audience_audio
+    title: "Community Participation: Interact with other audience members at the event via audio?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: all
+      title: All events from this group
+    - value: some
+      title: Some events from this group
+    - value: none
+      title: No events from this group
   - id: logo_url
     title: Logo URL
     type: url
@@ -130,6 +169,39 @@ types:
   - id: code_of_conduct_url
     title: Code of Conduct URL
     type: url
+  - id: community_participation_at_event
+    key: community_participation/at_event
+    title: "Community Participation: Interact with event?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: "yes"
+      title: "Yes"
+    - value: "no"
+      title: "No"
+  - id: community_participation_at_event_audience_text
+    key: community_participation/at_event_audience_text
+    title: "Community Participation: Interact with other audience members via text?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: "yes"
+      title: "Yes"
+    - value: "no"
+      title: "No"
+  - id: community_participation_at_event_audience_audio
+    key: community_participation/at_event_audience_audio
+    title: "Community Participation: Interact with other audience members via audio?"
+    type: enum
+    choices:
+    - value: unknown
+      title: Unknown
+    - value: "yes"
+      title: "Yes"
+    - value: "no"
+      title: "No"
 calendars:
   main:
     timezone: Europe/London

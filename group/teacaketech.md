@@ -7,9 +7,13 @@ timezone: Europe/London
 import:
   type: ical
   url: https://www.teacaketech.scot/our-virtual-events/feed.ical
-in_person: never
+in_person: none
 code_of_conduct_url: https://www.teacaketech.scot/our-virtual-events/
 logo_url: https://www.teacaketech.scot/images/ourvirtualevents.png
+community_participation:
+  at_event: all
+  at_event_audience_text: all
+  at_event_audience_audio: all
 ---
 
 An event based in Scotland, with lots of time for conversation at each event.
