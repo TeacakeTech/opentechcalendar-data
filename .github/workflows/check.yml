@@ -15,7 +15,6 @@ jobs:
       with:
         python-version: 3.13
         architecture: x64
-    # During initial development we'll use latest, but later we should use: pip install datatig
-    - run: pip install git+https://github.com/datatig/datatig.git@main#egg=datatig
+    - run: pip install datatig
     - run: python -m datatig check .
 
