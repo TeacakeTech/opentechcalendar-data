@@ -9,10 +9,9 @@ import:
 in_person: some
 code_of_conduct_url: https://plone.org/foundation/about/materials/foundation-resolutions/code-of-conduct
 community_participation:
-  at_event: unknown
-  at_event_audience_text: unknown
-  at_event_audience_audio: unknown
+  at_event: all
+  at_event_audience_text: all
+  at_event_audience_audio: all
 ---
 
-Plone - The CMS That Gives You Peace of Mind
-
+[Plone](https://plone.org) is an open source content management system (CMS) that is used to create, edit, and manage digital content, like websites, intranets, and custom solutions. It comes with over 20 years of growth, optimizations, and refinements. The result is a system trusted by governments, universities, businesses, and other organizations all over the world.
