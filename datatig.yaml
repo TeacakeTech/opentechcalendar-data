@@ -46,6 +46,10 @@ types:
   - id: import_url
     key: import/url
     title: Import URL
+  - id: import_exclude
+    key: import/exclude
+    title: Import Exclude
+    description: If set, if this string is present in the title or description of an event, that event will be excluded and not imported.
   - id: in_person
     title: In-person events
     type: enum
