@@ -4,7 +4,8 @@ url: https://www.meetup.com/aiothub-scotland/
 import:
   type: ical
   url: http://meetup.com/aiothub-scotland/events/ical
-  exclude: TBA
+  exclude:
+   - TBA
 country: 'GB'
 timezone: 'Europe/London'
 ---
