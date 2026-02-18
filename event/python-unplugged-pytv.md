@@ -2,9 +2,7 @@
 code_of_conduct_url: 'https://lp.jetbrains.com/legal/code-of-conduct/'
 community_participation:
   at_event: 'yes'
-  at_event_audience_audio: ''
   at_event_audience_text: 'yes'
-country: ''
 end_at: '2026-03-04T19:30'
 in_person: 'no'
 start_at: '2026-03-04T11:00'
