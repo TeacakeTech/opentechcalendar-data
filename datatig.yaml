@@ -51,6 +51,11 @@ types:
     title: Import Exclude
     description: If any of these strings are present in the title or description of an event, that event will be excluded and not imported.
     type: list-strings
+  - id: import_include
+    key: import/include
+    title: Import Include
+    description: One of these strings must be present in the title or description of an event.
+    type: list-strings
   - id: in_person
     title: In-person events
     type: enum
