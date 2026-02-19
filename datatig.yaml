@@ -40,6 +40,8 @@ types:
     choices:
     - value: ical
       title: iCal
+    - value: eventbrite-organisation
+      title: Eventbrite Organisation
   - id: timezone
     title: Timezone
     type: timezone
