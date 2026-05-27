@@ -9,7 +9,7 @@ import:
     - Stream
 in_person: 'some'
 timezone: 'Europe/London'
-title: 'Python Glascow'
+title: 'Python Glasgow'
 url: 'https://pythonglasgow.org/'
 ---
 
